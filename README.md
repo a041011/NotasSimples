@@ -37,7 +37,7 @@ Inclui ainda um ecrã adicional que acede à internet para apresentar uma “Fra
 - Arquitetura MVVM (ViewModel + State)
 
 
-# 🧩 Funcionalidades
+## 🧩 Funcionalidades
 ## **📝 Notas (offline)**
 
 - Criar notas (título e conteúdo)
