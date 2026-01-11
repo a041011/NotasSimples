@@ -1,43 +1,92 @@
-# NotasSimples
+# 📱 NotasSimples
 
-Aplicação Android desenvolvida em Kotlin com Jetpack Compose para a UC de Computação Móvel.
+Aplicação Android desenvolvida em Kotlin, utilizando Jetpack Compose, no âmbito da Unidade Curricular de Computação Móvel.
 
-## Objetivo
-A aplicação permite criar, visualizar e apagar notas guardadas localmente no dispositivo e inclui um ecrã adicional que obtém uma “Frase do dia” a partir de uma API pública (acesso à internet).
 
-## Requisitos cumpridos
-- **Jetpack Compose** (UI)
-- **Multi-ecrã** (Navigation Compose)
-- **Armazenamento local** com **Room**
-- **Acesso à internet** com **Retrofit** (API ZenQuotes)
+## **🎯 Objetivo**
 
-## Funcionalidades
-### Notas (offline)
-- Criar nota (título e conteúdo)
-- Listar notas guardadas
+A aplicação NotasSimples permite criar, visualizar e apagar notas guardadas localmente no dispositivo móvel.
+Inclui ainda um ecrã adicional que acede à internet para apresentar uma “Frase do dia”, obtida a partir de uma API pública, cumprindo assim os requisitos de acesso online definidos para o trabalho.
+
+
+## **✅ Requisitos cumpridos**
+
+- Jetpack Compose – Interface gráfica declarativa
+
+- Multi-ecrã – Navegação entre ecrãs com Navigation Compose
+
+- Armazenamento local – Persistência de dados offline com Room
+
+- Acesso à internet – Consumo de API REST com Retrofit
+
+
+## **⚙️ Tecnologias utilizadas**
+
+- Kotlin
+
+- Jetpack Compose
+
+- Room (base de dados local)
+
+- Retrofit (comunicação HTTP)
+
+- Moshi (conversão JSON → objetos Kotlin)
+
+- Navigation Compose
+
+- Arquitetura MVVM (ViewModel + State)
+
+
+# 🧩 Funcionalidades
+## **📝 Notas (offline)**
+
+- Criar notas (título e conteúdo)
+
+- Listar todas as notas guardadas
+
 - Apagar notas
-- As notas permanecem guardadas após fechar a aplicação (Room)
 
-### Frase do dia (online)
-- Obter frase motivacional e autor a partir da internet
-- Botão “Atualizar” para pedir uma nova frase
-- Tratamento de erros (ex.: sem internet)
+- As notas permanecem guardadas após fechar a aplicação, utilizando Room
 
-## Como executar
-1. Abrir o projeto no Android Studio
-2. Sincronizar Gradle (Sync)
-3. Executar em emulador ou dispositivo Android (Run)
 
-## Estrutura do projeto (resumo)
-- `data/local` → Room (Entity, DAO, Database)
-- `repo` → Repositório (camada entre dados e ViewModel)
-- `viewmodel` → ViewModels (estado e lógica)
-- `ui/screens` → Ecrãs Compose
+## **🌐 Frase do dia (online)**
 
-## Limitações
-- Sem autenticação de utilizadores
-- Interface simples, focada em demonstrar os requisitos
+- Ecrã dedicado para apresentação da “Frase do dia”
+
+- Obtenção de uma frase aleatória através de uma API pública
+
+- Botão para atualizar a frase
+
+- Tratamento de erros em caso de falha de ligação à internet
+
+
+## **🗂️ Estrutura da aplicação**
+
+A aplicação segue uma separação clara de responsabilidades:
+
+- ui – Ecrãs desenvolvidos com Jetpack Compose
+
+- viewmodel – Gestão de estado e lógica da aplicação (MVVM)
+
+- data.local – Entidades, DAO e base de dados Room
+
+- data.remote – Acesso à API externa
+
+- repo – Repositórios para abstração das fontes de dados
+
+
+## **⚠️ Limitações e melhorias futuras**
+
 - A funcionalidade “Frase do dia” depende de ligação à internet
 
-## Credenciais
-Não são necessárias credenciais/contas para usar a aplicação.
+- Não existe autenticação de utilizadores
+
+- Poderia ser adicionada sincronização na cloud (ex.: Firebase)
+
+- Poderia ser melhorada a edição de notas existentes
+
+
+## **📦 Entrega**
+
+O código-fonte da aplicação encontra-se disponível neste repositório GitHub.
+Este README serve como documentação da aplicação, explicando o seu funcionamento, tecnologias utilizadas e limitações conhecidas.
